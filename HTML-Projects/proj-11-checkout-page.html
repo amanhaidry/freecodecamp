@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout Page</title>
+</head>
+<body>
+  <!-- Page Title -->
+  <h1>Checkout</h1>
+
+  <!-- First Section: Cart -->
+  <section>
+    <h2>Your Cart</h2>
+    <img src="https://cdn.freecodecamp.org/curriculum/labs/cube.jpg" alt="A cube item in your cart">
+  </section>
+
+  <!-- Second Section: Payment Information -->
+  <section>
+    <h2>Payment Information</h2>
+    <form>
+      <!-- Card Name -->
+      <label for="card-name">
+        Cardholder Name 
+        <span aria-hidden="true">*</span>
+      </label>
+      <input 
+        type="text" 
+        id="card-name" 
+        name="card-name" 
+        placeholder="Enter name on card" 
+        required
+      >
+      <br><br>
+
+      <!-- Card Number -->
+      <label for="card-number">
+        Card Number 
+        <span aria-hidden="true">*</span>
+      </label>
+      <input 
+        type="text" 
+        id="card-number" 
+        name="card-number" 
+        placeholder="Enter card number" 
+        aria-describedby="card-number-help" 
+        required
+      >
+      <p id="card-number-help">Card number must be 16 digits long.</p>
+      <br><br>
+
+      <!-- Expiration Date (optional extra field for realism) -->
+      <label for="card-expiry">
+        Expiration Date 
+      </label>
+      <input 
+        type="text" 
+        id="card-expiry" 
+        name="card-expiry" 
+        placeholder="MM/YY"
+      >
+      <br><br>
+
+      <!-- Submit Button -->
+      <button type="submit">Submit Payment</button>
+    </form>
+  </section>
+</body>
+</html>

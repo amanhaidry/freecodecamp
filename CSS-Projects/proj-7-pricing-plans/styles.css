@@ -1,0 +1,101 @@
+body {
+    font-family: 'Times New Roman', serif;
+    text-align: center;
+}
+
+.pricing-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid black;
+    padding: 20px;
+    gap: 10px;
+}
+
+.pricing-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    flex: 0 0 200px;
+    border: 2px solid black;
+    padding: 20px;
+    background-color: white;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    background-color: #f9f9f9;
+}
+
+.basic-plan {
+    order: 0;
+}
+
+.pro-plan {
+    order: 1;
+}
+
+.premium-plan {
+    order: 2;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+p {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+hr {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    font-size: 0.9rem;
+    flex-grow: 1; 
+}
+
+.features li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.check::before {
+    content: "✓";
+    color: green;
+    position: absolute;
+    left: 0;
+}
+
+.cross::before {
+    content: "X";
+    color: red;
+    position: absolute;
+    left: 0;
+}
+
+.btn {
+    background-color: #f5c242;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #e0b13c;
+    transform: translateY(-2px);
+}

@@ -1,0 +1,85 @@
+body {
+    background: radial-gradient(circle, #2e7d32, #1b5e20); /* Poker table green */
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Georgia', serif;
+}
+
+/* Container */
+#playing-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Card */
+.card {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    width: 160px;
+    height: 230px;
+    border-radius: 12px;
+    padding: 12px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid #ddd;
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: translateY(-10px) rotate(2deg);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+
+/* Left/Middle/Right Alignment */
+.left {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.middle {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    flex-grow: 1;
+}
+
+.right {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: rotate(180deg);
+    font-size: 1.2rem;
+}
+
+/* Handling the 4 and 5 card rows within the middle column */
+.row {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+/* Color Schemes */
+.red { color: #d32f2f; }
+.card:not(.red) { color: #212121; }
+
+/* Small suit symbol helper */
+.left span, .right span {
+    font-size: 0.9rem;
+}

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+  <nav id="navbar">
+    <header>HTML Documentation</header>
+    <ul>
+      <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+      <li><a href="#The_History_of_HTML" class="nav-link">The History of HTML</a></li>
+      <li><a href="#Tags_and_Attributes" class="nav-link">Tags and Attributes</a></li>
+      <li><a href="#Golden_Rules_To_Remember" class="nav-link">Golden Rules To Remember</a></li>
+      <li><a href="#HTML_Editors" class="nav-link">HTML Editors</a></li>
+      <li><a href="#Creating_Your_First_HTML_Webpage" class="nav-link">Creating Your First HTML Webpage</a></li>
+      <li><a href="#Basic_Construction_of_an_HTML_Page" class="nav-link">Basic Construction of an HTML Page
+        </a></li>
+      <li><a href="#Further_Tags" class="nav-link">Further Tags
+        </a></li>
+      <li><a href="#Key_Elements" class="nav-link">Key Elements</a></li>
+      <li><a href="#Resources" class="nav-link">Resources</a></li>
+      
+    </ul>
+  </nav>
+  
+  <main id="main-doc">
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+      <article>
+        <p>HTML is the language in which most websites are written. HTML is used to create pages and make them functional.
+        </p>
+  
+        <p>The code used to make them visually appealing is known as CSS and we shall focus on this in a later tutorial.
+          For now, we will focus on teaching you how to build rather than design.
+  
+        </p>
+  
+      </article>
+  
+  
+  
+    </section>
+    <section class="main-section" id="The_History_of_HTML">
+      <header>The History of HTML</header>
+      <article>
+  
+        <p>HTML was first created by Tim Berners-Lee, Robert Cailliau, and others starting in 1989. It stands for Hyper
+          Text Markup Language.</p>
+  
+        <p>Hypertext means that the document contains links that allow the reader to jump to other places in the document
+          or to another document altogether. The latest version is known as HTML5.</p>
+  
+        <p> A Markup Language is a way that computers speak to each other to control how text is processed and presented.
+          To do this HTML uses two things: tags and attributes.</p>
+  
+  
+      </article>
+    </section>
+  
+  
+    <section class="main-section" id="Tags_and_Attributes">
+      <header>Tags and Attributes
+      </header>
+      <article>
+        <p>Tags and attributes are the basis of HTML.</p>
+  
+        <p>They work together but perform different functions - it is worth investing 2 minutes in differentiating the
+          two.</p>
+  
+        <p>Tags are used to mark up the start of an HTML element and they are usually enclosed in angle brackets. An
+          example of a tag is: <code>&lt;h1&gt;</code>
+          .</p>
+  
+        <p>Most tags must be opened <code>&lt;h1&gt;</code> and closed<code>&lt;/h1&gt;</code> in order to function.</p>
+  
+        <p>Attributes contain additional pieces of information. Attributes take the form of an opening tag and additional
+          info is placed inside.</p>
+  
+        <p>An example of an attribute is:</p>
+        <code>&lt;img src="mydog.jpg" alt="A photo of my dog."/&gt;</code>
+  
+        <p>In this instance, the image source (src) and the alt text (alt) are attributes of the <code>&lt;img&gt;</code>
+          tag.</p>
+      </article>
+    </section>
+  
+    <section class="main-section" id="Golden_Rules_To_Remember">
+      <header>Golden Rules To Remember
+      </header>
+      <article>
+  
+        <ol>
+          <li>
+            <p>The vast majority of tags must be opened (<code>&lt;tag&gt;</code>) and closed (<code>&lt;/tag&gt;</code>)
+              with the element information such as a title or text resting between the tags.</p>
+          </li>
+          <li>
+            <p>When using multiple tags, the tags must be closed in the order in which they were opened. For example:</p>
+          </li>
+        </ol>
+        <p><code>&lt;strong&gt;&lt;em&gt;This is really important!&lt;/em&gt;&lt;/strong&gt;
+      </code></p>
+  
+      </article>
+    </section>
+    <section class="main-section" id="HTML_Editors">
+      <header>HTML Editors
+      </header>
+  
+      <article>
+        <p>Now that we've gotten the basic theory out of the way. It's time to learn how to build our first website.</p>
+  
+        <p>First off, we must ensure that we have the right tools. Most important, we need an HTML editor.</p>
+  
+        <p>There are many choices on the market. Here are a handful of the most popular:</p>
+  
+        <header>Sublime Text 3</header>
+        <p>However, for this tutorial, we will use the Sublime Text 3 as it is free and also offers cross-platform support
+          for Windows, Mac, and Linux users.</p>
+        <img src="https://html.com/wp-content/uploads/html-hpg-sublime.png" alt="sublime screenshot" width=60% />
+        <p><i>Sublime Text 3 has a mini-preview window on the right.</i></p>
+  
+        <div class="parent">
+          <div class="pros">
+            <header style="color:#48c156" ;>Pros</header>
+            <ul>
+                <li>Easily customizable</li>
+                <li>Beginner-friendly</li>
+                <li>Pleasant color schemes to choose from.</li>
+  
+            </ul>
+          </div>
+  
+          <div class="cons">
+  
+            <header style="color:#ff6961;">Cons</header>
+            <ul>
+                <li>Can't print documents or code</li>
+                <li>No toolbar or dashboard available.</li>
+            </ul>
+          </div>
+        </div>
+  
+        <header>Notepad ++
+        </header>
+        <p>Another common choice for HTML and other language coders is Notepad ++. It is a tiny program to download and
+          perform the functions you need for writing clean code.
+        </p>
+        <img src="https://html.com/wp-content/uploads/html-homepage-notepad.webp"  alt="notepad++ screenshot" width=60% " />
+        <p><i>This is Notepad ++. Far from glamorous but does the job.</i></p>
+  
+   <div class="parent">
+            <div class="pros">
+              <header style="color:#48c156" ;>Pros</header>
+              <ul>
+                  <li>Distraction-free interface</li>
+                  <li>Auto-completion feature</li>
+                  <li>Plugin options for extended functionalities.</li>
+              </ul>
+            </div>
+    
+            <div class="cons">
+              <header style="color:#ff6961;">Cons</header>
+              <ul>
+                  <li>Can be difficult to get used to for beginners</li>
+                  <li>No support for Mac.</li>
+              </ul>
+            </div>
+          </div>     
+          
+      <header>Komodo Edit
+        </header>
+        <p>Komodo Edit is one of two editors released by the same label. They offer a simple, open-source editor with a variety
+          of extensions and language support.</p>
+        
+        <p>It is free to download.</p>
+  
+        <img src="https://html.com/wp-content/uploads/html-hpg-komodo.png" alt="komodo edit screenshot" width="65%" />
+        <p><i>Komodo isn't one for a flash interface either but is simple to use.
+          </i></p>
+          <div class="parent">
+            <div class="pros">
+              <header style="color:#48c156" ;>Pros</header>
+              <ul>
+                <li>Easy-to-grasp coding interface</li>
+                <li>Available for Mac, Windows, and Linux</li>
+                <li>Impressive language support.</li>
+              </ul>
+            </div>
+          
+            <div class="cons">
+              <header style="color:#ff6961;">Cons</header>
+          
+              <ul>
+                <li>No autocompletion by default</li>
+                <li>Visual settings are difficult to find and change.</li>
+              </ul>
+            </div>
+          </div>
+  
+  
+      </article>
+    </section>
+    </section>
+    <section class="main-section" id="Creating_Your_First_HTML_Webpage">
+      <header>Creating Your First HTML Webpage
+      </header>
+      <article>
+          <p>First off, you need to open your HTML editor, where you will find a clean white page on which to write your code.</p>
+
+          <p>From there you need to layout your page with the following tags.</p>
+
+          
+ 
+      </article>
+    </section>
+  
+    </section>
+    <section class="main-section" id="Basic_Construction_of_an_HTML_Page">
+      <header>Basic Construction of an HTML Page
+      </header>
+      <article>          <p> These tags should be placed underneath each other at the top of every HTML page that you create.</p>
+
+        <p><code>&lt;!DOCTYPE html&gt;</code> &mdash; This tag specifies the language you will write on the page. In this case, the language is HTML 5.</p>
+        
+        <p><code>&lt;html&gt;</code> &mdash; This tag signals that from here on we are going to write in HTML code.</p>
+        
+        <p><code>&lt;head&gt;</code> &mdash; This is where all the metadata for the page goes &mdash; stuff mostly meant for search engines and other computer programs.</p>
+        
+        <p><code>&lt;body&gt;</code> &mdash; This is where the content of the page goes.</p>
+        
+        
+       <img src="https://html.com/wp-content/uploads/html-homepage-layout-demo.webp" alt="basic html schema" width="65%"/>
+       <p><i>This is how your average HTML page is structured visually.</i></p>   </article>
+    </section>
+    </section>
+    <section class="main-section" id="Further_Tags">
+      <header>Further Tags
+      </header>
+      <article>
+          <p>Inside the <code>&lt;head&gt;</code> tag, there is one tag that is always included: <code>&lt;title&gt;</code>, but there are others that are just as important:</p>
+
+          <code>&lt;title&gt;</code>
+          <p>This is where we insert the page name as it will appear at the top of the browser window or tab.</p>
+          <code>&lt;meta&gt;</code>
+          <p>This is where information about the document is stored: character encoding, name (page context), description.</p>
+
+        <p>Let's try out a basic  <code>&lt;head&gt;</code> section:</p>
+     
+  <div class="codes">
+  &lt;head&gt;<br>
+  &lt;title&gt;My First Webpage&lt;/title&gt;<br>
+  &lt;meta charset="UTF-8"&gt;<br>
+  &lt;meta name="description" content="This field contains information about your page. It is usually around two sentences long."&gt;.<br>
+  &lt;meta name="author" content="Conor Sheils"&gt;<br>
+  &lt;/head&gt;</div>
+
+  <header>Adding Content</header>
+      <p>Next, we will make <code>&lt;body&gt;</code> tag.</p>
+      
+      <p>The HTML <code>&lt;body&gt;</code> is where we add the content which is designed for viewing by human eyes.</p>
+      
+      <p>This includes text, images, tables, forms and everything else that we see on the internet each day.</p>
+      
+     <header> How to Add HTML Headings To Your Web Page</header>
+      <p>In HTML, headings are written in the following elements:</p>
+      
+<div class="cascade">
+      <ul>
+        <li><code>&lt;h1&gt;</code></li>
+        <ul>
+          <li><code>&lt;h2&gt;</code></li>
+          <ul>
+            <li><code>&lt;h3&gt;</code></li>
+            <ul>
+              <li><code>&lt;h4&gt;</code></li>
+              <ul>
+                <li><code>&lt;h5&gt;</code></li>
+                <ul>
+                  <li><code>&lt;h6&gt;</code></li>
+                </ul>
+              </ul>
+            </ul>
+          </ul>
+        </ul>
+      </ul>
+</div>
+
+     <p> As you might have guessed <code>&lt;h1&gt;</code> and <code>&lt;h2&gt;</code> should be used for the most important titles, while the remaining tags should be used for sub-headings and less important text.</p>
+      
+     <p>Search engine bots use this order when deciphering which information is most important on a page.</p>
+      </article>
+    </section>
+    <section class="main-section" id="Key_Elements">
+      <header>Key Elements
+      </header>
+  
+      <article>
+  <p>They are as follows:  </p>
+  <table>
+    <tr>
+      <th>
+        Element
+      </th>
+      <th>
+        Meaning
+      </th>
+      <th>
+        Purpose
+      </th>
+    </tr>
+    <tr>
+      <td><code>&lt;b&gt;</code></td>
+      <td>Bold</td>
+      <td>Highlight important information</td>
+    </tr>
+    <tr>
+      <td><code>&lt;strong&gt;</code></td>
+      <td>Strong</td>
+      <td>Similarly to bold, to highlight key text</td>
+    </tr>
+    </tr>
+    <tr>
+      <td><code>&lt;i&gt;</code></td>
+      <td>i</td>
+      <td>To denote text
+      </td>
+    </tr>
+    <tr>
+      <td><code>&lt;em&gt;</code></td>
+      <td>Emphasised Text</td>
+      <td>Usually used as image captions</td>
+    </tr>
+    <tr>
+      <td><code>&lt;mark&gt;</code></td>
+      <td>Marked Text</td>
+      <td>Highlight the background of the text</td>
+    </tr>
+    <tr>
+      <td><code>&lt;small&gt;</code></td>
+      <td>Small Text</td>
+      <td>To shrink the text</td>
+    </tr>
+    <tr>
+      <td><code>&lt;strike&gt;</code></td>
+      <td>Striked Out Text</td>
+      <td>To place a horizontal line across the text</td>
+    </tr>
+    <tr>
+      <td><code>&lt;u&gt;</code></td>
+      <td>Underlined Text</td>
+      <td>Used for links or text highlights</td>
+    </tr>
+    <tr>
+      <td><code>&lt;ins&gt;</code></td>
+      <td>Inserted Text</td>
+      <td>Displayed with an underline to show an inserted text</td>
+    </tr>
+    <tr>
+      <td><code>&lt;sub&gt;</code></td>
+      <td>Subscript Text</td>
+      <td>Typographical stylistic choice</td>
+    </tr>
+    <tr>
+      <td><code>&lt;sup&gt;</code></td>
+      <td>Superscript Text </td>
+      <td>Another typographical presentation style</td>
+    </tr>
+    </table>
+
+  <p>These tags must be opened and closed around the text in question.</p>
+
+<p>Let's try it out. On a new line in the HTML editor, type the following HTML code:</p>
+
+<div class="codes">&lt;p&gt;Welcome to &lt;em&gt;my&lt;/em&gt; brand new website. 
+  This site will be my &lt;strong&gt;new&lt;strong&gt; home on the web.&lt;/p&gt;</div>
+
+
+<mark>Don't forget to hit save and then refresh the page in your browser to see the results.</mark>
+ </article>
+ </section>
+
+ <section class="main-section" id="Resources">
+   <header>Resources</header>
+   <p>Resources and information were collected from <mark style="background-color: rgba(163, 190, 193, 0.515);"><a href="https://html.com/">html.com</a></mark> </p>
+ </section>
+  </main>
+
+</body>
+</html>

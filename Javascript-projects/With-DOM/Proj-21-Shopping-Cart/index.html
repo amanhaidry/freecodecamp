@@ -6,22 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>freeCodeCamp Shopping Cart</title>
     <link rel="stylesheet" href="./styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   </head>
   <body>
     <header>
-      <h1 class="title">Desserts Page</h1>
+      <div class="header-content">
+        <h1 class="title">🍰 Dessert Haven 🍰</h1>
+        <p class="subtitle">Freshly Baked Delights</p>
+      </div>
     </header>
     <main>
-      <button id="cart-btn" type="button" class="btn">
+      <button id="cart-btn" type="button" class="btn cart-btn">
+        <i class="fas fa-shopping-cart"></i>
         <span id="show-hide-cart">Show</span> Cart
+        <span class="cart-count" id="cart-count">0</span>
       </button>
       <div id="cart-container">
-        <button class="btn" id="clear-cart-btn">Clear Cart</button>
+        <div class="cart-header">
+          <h2>Your Cart</h2>
+          <button class="btn btn-clear" id="clear-cart-btn"><i class="fas fa-trash"></i> Clear</button>
+        </div>
         <div id="products-container"></div>
-        <p>Total number of items: <span id="total-items">0</span></p>
-        <p>Subtotal: <span id="subtotal">$0</span></p>
-        <p>Taxes: <span id="taxes">$0</span></p>
-        <p>Total: <span id="total">$0</span></p>
+        <div class="cart-summary">
+          <div class="summary-item">
+            <span>Items:</span>
+            <strong id="total-items">0</strong>
+          </div>
+          <div class="summary-item">
+            <span>Subtotal:</span>
+            <strong id="subtotal">$0</strong>
+          </div>
+          <div class="summary-item">
+            <span>Taxes:</span>
+            <strong id="taxes">$0</strong>
+          </div>
+          <div class="summary-item total-row">
+            <span>Total:</span>
+            <strong id="total">$0</strong>
+          </div>
+        </div>
       </div>
       <div id="dessert-card-container"></div>
     </main>

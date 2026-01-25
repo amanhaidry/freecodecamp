@@ -102,6 +102,7 @@ products.forEach(({ name, id, price, category }) => {
 class ShoppingCart {
   constructor() {
     this.items = [];
+    this.counts = {};
     this.total = 0;
     this.taxRate = 8.25;
   }
@@ -111,13 +112,9 @@ class ShoppingCart {
     const { name, price } = product;
     this.items.push(product);
 
-    const totalCountPerProduct = {};
-    this.items.forEach((dessert) => {
-      totalCountPerProduct[dessert.id] =
-        (totalCountPerProduct[dessert.id] || 0) + 1;
-    });
+    this.counts[id] = (this.counts[id] || 0) + 1;
 
-    const currentProductCount = totalCountPerProduct[product.id];
+    const currentProductCount = this.counts[id];
     const currentProductCountSpan = document.getElementById(
       `product-count-for-id${id}`,
     );

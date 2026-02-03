@@ -16,7 +16,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console,
+  font-family:
+    Menlo,
+    Consolas,
+    Monaco,
+    Liberation Mono,
+    Lucida Console,
     monospace;
   font-size: 1.125rem;
   color: var(--light-grey);
@@ -94,13 +99,26 @@ h2 {
   gap: 1rem;
   margin-block-end: 1rem;
   min-height: 40vh;
+  max-height: 60vh;
+  overflow-y: auto;
   border: 2px dashed var(--orange);
   padding: 1rem;
 }
 
 .animation-frame {
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
-    helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial,
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    avenir next,
+    avenir,
+    segoe ui,
+    helvetica neue,
+    helvetica,
+    Cantarell,
+    Ubuntu,
+    roboto,
+    noto,
+    arial,
     sans-serif;
   padding: 15px 10px;
   border: 5px solid var(--orange);

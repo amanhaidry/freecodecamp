@@ -18,8 +18,10 @@ checkMessageButton.addEventListener("click", () => {
     return;
   }
 
-  result.textContent = isSpam(messageInput.value)
+  const isSpamMessage = isSpam(messageInput.value);
+  result.textContent = isSpamMessage
     ? "Oh no! This looks like a spam message."
     : "This message does not seem to contain any spam.";
+  result.className = isSpamMessage ? "spam" : "not-spam";
   messageInput.value = "";
 });

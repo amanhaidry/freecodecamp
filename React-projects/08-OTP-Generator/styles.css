@@ -1,0 +1,56 @@
+/* Container styling */
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Title */
+#otp-title {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* OTP display */
+#otp-display {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 15px 0;
+  color: #0077cc;
+}
+
+/* Timer text */
+#otp-timer {
+  font-size: 1rem;
+  margin: 10px 0 20px;
+  color: #555;
+  min-height: 20px; /* keeps space reserved even when empty */
+}
+
+/* Button styling */
+#generate-otp-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #0077cc;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#generate-otp-button:hover:enabled {
+  background-color: #005fa3;
+}
+
+#generate-otp-button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}

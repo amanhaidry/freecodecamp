@@ -1,0 +1,165 @@
+:root {
+  --bg: linear-gradient(135deg, #f6f8ff 0%, #eef6ff 100%);
+  --card: #ffffff;
+  --accent: #2563eb;
+  --text: #0f172a;
+  --muted: #6b7280;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container,
+body > div {
+  max-width: 720px;
+  margin: 48px auto;
+  padding: 24px;
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(16, 24, 40, 0.08);
+}
+
+h2 {
+  margin: 0 0 16px 0;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+form {
+  display: grid;
+  gap: 12px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e6e9ef;
+  border-radius: 8px;
+  background: transparent;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+input[type="number"] {
+  max-width: 140px;
+}
+
+/* checkbox sits inline with its label text */
+label[for="guest"] {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+
+button[type="submit"] {
+  appearance: none;
+  border: 0;
+  background: var(--accent);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    transform 0.06s ease;
+}
+
+button[type="submit"]:hover {
+  background: #1e4ed8;
+}
+button[type="submit"]:active {
+  transform: translateY(1px);
+}
+
+p#message {
+  margin: 6px 0 0 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+  white-space: pre-wrap;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: linear-gradient(
+    180deg,
+    rgba(37, 99, 235, 0.04),
+    rgba(37, 99, 235, 0.02)
+  );
+}
+
+/* make submit and message span full width in grid */
+form button,
+form #message {
+  grid-column: 1/-1;
+}
+
+/* Responsive: two-column on wider screens */
+@media (min-width: 640px) {
+  form {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+  }
+  /* place the guest checkbox and submit/message on their own rows */
+  label[for="guest"] {
+    grid-column: auto;
+  }
+  form button,
+  form #message {
+    grid-column: 1/-1;
+  }
+}
+
+/* Focus styles for accessibility */
+input:focus,
+textarea:focus,
+button:focus {
+  outline: 3px solid rgba(37, 99, 235, 0.12);
+  outline-offset: 2px;
+}
+
+/* small screens: comfortable spacing */
+@media (max-width: 420px) {
+  .container {
+    padding: 16px;
+    margin: 20px;
+  }
+  input[type="number"] {
+    max-width: 100%;
+  }
+}

@@ -24,11 +24,19 @@ export const SuperheroForm = () => {
   const [powerSource, setPowerSource] = useState("");
   const [powers, setPowers] = useState([]);
 
+  const handlePowersChange = (e) => {
+    const { value, checked } = e.target;
+    setPowers(checked ? [...powers, value] : powers.filter((p) => p !== value));
+  };
+
   return (
     <div className="form-wrap">
       <h2>Superhero Application Form</h2>
       <p>Please complete all fields</p>
-      <form>
+      <form
+        method="post"
+        action="https://superhero-application-form.freecodecamp.org"
+      >
         <div className="section">
           <label>
             Hero Name
@@ -64,9 +72,20 @@ export const SuperheroForm = () => {
         <label className="section column">
           List your powers (select all that apply):
           {powersOptions.map((power) => (
-            <label key={power}>Hello</label>
+            <label key={power}>
+              <input
+                type="checkbox"
+                value={power}
+                checked={powers.includes(power)}
+                onChange={handlePowersChange}
+              />
+              <span>{power}</span>
+            </label>
           ))}
         </label>
+        <button className="submit-btn" type="submit" disabled={!heroName || !realName || !powerSource || powers.length === 0}>
+          Join the League
+        </button>
       </form>
     </div>
   );

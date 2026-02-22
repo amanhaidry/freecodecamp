@@ -1,29 +1,33 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Superhero Application Form</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.development.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.development.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.26.3/babel.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SuperHero Form</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.development.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.development.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.26.5/babel.min.js"></script>
     <script
       data-plugins="transform-modules-umd"
       type="text/babel"
+      data-presets="react"
+      data-type="module"
       src="index.jsx"
     ></script>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
-
   <body>
-    <div id="root"></div>
+    <main id="app-container"></main>
     <script
       data-plugins="transform-modules-umd"
       type="text/babel"
       data-presets="react"
       data-type="module"
     >
-      import { SuperheroForm } from './index.jsx';
-      ReactDOM.createRoot(document.getElementById('root')).render(<SuperheroForm />);
+      import { SuperheroForm } from "./index.jsx";
+      const appContainer = document.getElementById("app-container");
+      const root = ReactDOM.createRoot(appContainer);
+      root.render(<SuperheroForm />);
     </script>
   </body>
 </html>

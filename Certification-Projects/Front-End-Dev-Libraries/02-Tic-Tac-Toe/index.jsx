@@ -1,8 +1,13 @@
-function Board() {
-  const [squares, setSquares] = React.useState(Array(9).fill(null));
-  const [isXNext, setIsXNext] = React.useState(true);
+const { useState } = React;
 
-  const calculateWinner = (squares) => {
+export function Board() {
+  const initialSquares = Array(9).fill(null);
+  const [squares, setSquares] = useState(initialSquares);
+  const [xIsNext, setXIsNext] = useState(true);
+  const [winner, setWinner] = useState(null);
+  const [isDraw, setIsDraw] = useState(false);
+
+  function calculateWinner(squares) {
     const lines = [
       [0, 1, 2],
       [3, 4, 5],
@@ -13,8 +18,7 @@ function Board() {
       [0, 4, 8],
       [2, 4, 6],
     ];
-    for (let i = 0; i < lines.length; i++) {
-      const [a, b, c] = lines[i];
+    for (let [a, b, c] of lines) {
       if (
         squares[a] &&
         squares[a] === squares[b] &&
@@ -24,54 +28,50 @@ function Board() {
       }
     }
     return null;
-  };
+  }
 
-  const winner = calculateWinner(squares);
-  const isBoardFull = squares.every((square) => square !== null);
+  function handleClick(i) {
+    if (squares[i] || winner) return;
 
-  const handleClick = (index) => {
-    // Don't allow clicking if there's already a winner
-    if (winner || squares[index]) {
-      return;
-    }
-
-    const newSquares = [...squares];
-    newSquares[index] = isXNext ? "X" : "O";
+    const newSquares = squares.slice();
+    newSquares[i] = xIsNext ? "X" : "O";
     setSquares(newSquares);
-    setIsXNext(!isXNext);
-  };
+    setXIsNext(!xIsNext);
 
-  const handleReset = () => {
-    setSquares(Array(9).fill(null));
-    setIsXNext(true);
-  };
+    const gameWinner = calculateWinner(newSquares);
+    if (gameWinner) {
+      setWinner(gameWinner);
+    } else if (!newSquares.includes(null)) {
+      setIsDraw(true);
+    }
+  }
 
-  let status;
-  if (winner) {
-    status = `Winner: ${winner}`;
-  } else if (isBoardFull) {
-    status = "Draw";
-  } else {
-    status = `Next Player: ${isXNext ? "X" : "O"}`;
+  function resetGame() {
+    setSquares(initialSquares);
+    setXIsNext(true);
+    setWinner(null);
+    setIsDraw(false);
   }
 
   return (
     <div className="game-container">
-      <div className="status">{status}</div>
       <div className="board">
-        {squares.map((square, index) => (
-          <button
-            key={index}
-            className="square"
-            onClick={() => handleClick(index)}
-          >
-            {square}
+        {squares.map((value, i) => (
+          <button key={i} className="square" onClick={() => handleClick(i)}>
+            {value}
           </button>
         ))}
       </div>
-      <button id="reset" onClick={handleReset}>
-        Reset Game
+      <button id="reset" onClick={resetGame}>
+        Reset
       </button>
+      <div id="message" className="status">
+        {winner
+          ? `Winner: ${winner}`
+          : isDraw
+            ? "Draw!"
+            : `Next Player: ${xIsNext ? "X" : "O"}`}
+      </div>
     </div>
   );
 }

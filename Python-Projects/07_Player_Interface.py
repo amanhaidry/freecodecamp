@@ -36,12 +36,5 @@ class Pawn(Player):
             (1, 0)    # Right
         ]
 
-    def level_up(self):
-        # Add diagonal moves
-        diagonal_moves = [
-            (1, 1),    # Up-Right
-            (-1, 1),   # Up-Left
-            (1, -1),   # Down-Right
-            (-1, -1)   # Down-Left
-        ]
-        self.moves.extend(diagonal_moves)
+    def 
+   

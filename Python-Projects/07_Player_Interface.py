@@ -3,10 +3,10 @@ from abc import ABC, abstractmethod
 
 class Player(ABC):
     def __init__(self):
-        # Initial setup
-        self.moves = []                # Empty list, to be defined in concrete classes
-        self.position = (0, 0)         # Starting position
-        self.path = [self.position]    # Path begins with initial position
+        # Initial attributes
+        self.moves = []              # Empty until defined in concrete class
+        self.position = (0, 0)       # Starting position
+        self.path = [self.position]  # Path begins with initial position
 
     def make_move(self):
         # Choose a random move from available moves
@@ -21,7 +21,7 @@ class Player(ABC):
 
     @abstractmethod
     def level_up(self):
-        """Abstract method to be implemented in subclasses."""
+        """Abstract method to be implemented in subclasses"""
         pass
 
 
@@ -36,5 +36,12 @@ class Pawn(Player):
             (1, 0)    # Right
         ]
 
-    def 
-   
+    def level_up(self):
+        # Add diagonal moves
+        diagonal_moves = [
+            (1, 1),    # Up-Right
+            (-1, 1),   # Up-Left
+            (1, -1),   # Down-Right
+            (-1, -1)   # Down-Left
+        ]
+        self.moves.extend(diagonal_moves)

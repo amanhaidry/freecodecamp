@@ -9,7 +9,7 @@ class Player(ABC):
         self.path = [self.position]  # Path begins with initial position
 
     def make_move(self):
-        # Choose a random move from available moves
+        # random move from available moves
         move = random.choice(self.moves)
         # Update position
         new_x = self.position[0] + move[0]
@@ -37,7 +37,7 @@ class Pawn(Player):
         ]
 
     def level_up(self):
-        # Add diagonal moves
+        # diagonal moves
         diagonal_moves = [
             (1, 1),    # Up-Right
             (-1, 1),   # Up-Left

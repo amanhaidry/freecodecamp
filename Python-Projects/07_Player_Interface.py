@@ -45,3 +45,22 @@ class Pawn(Player):
             (-1, -1)   # Down-Left
         ]
         self.moves.extend(diagonal_moves)
+
+if __name__ == '__main__':
+    print("--- Testing Pawn ---")
+    pawn = Pawn()
+    print(f"Initial position: {pawn.position}")
+    print(f"Initial available moves: {pawn.moves}")
+    
+    print("\nMaking 3 moves:")
+    for i in range(1, 4):
+        print(f"Move {i}: {pawn.make_move()}")
+        
+    print(f"Path history: {pawn.path}")
+    
+    print("\nLeveling up Pawn...")
+    pawn.level_up()
+    print(f"Available moves after level up: {pawn.moves}")
+    
+    print(f"\nMove after level up: {pawn.make_move()}")
+    print(f"Final path: {pawn.path}")
